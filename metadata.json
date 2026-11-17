@@ -1,0 +1,6 @@
+{
+  "name": "WRAP UP",
+  "description": "An annual memory-preservation club. We don't just wrap gifts. We wrap up years.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

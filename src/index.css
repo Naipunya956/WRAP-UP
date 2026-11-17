@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dusty-pink: #E8B8C4;
+  --color-blush: #F3C9D5;
+  --color-burgundy: #57252E;
+  --color-espresso: #3E2624;
+  --color-cream: #F7F0E6;
+  --color-paper: #FFFDF9;
+  --color-rose: #C98799;
+
+  --font-display: "Bodoni Moda", "Cormorant Garamond", Georgia, serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-hand: "Caveat", cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #F7F0E6;
+    color: #3E2624;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #F7F0E6;
+    color: #3E2624;
+  }
+
+  h1, h2 {
+    font-family: "Bodoni Moda", "Cormorant Garamond", Georgia, serif;
+    text-wrap: balance;
+  }
+
+  h3, h4 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    text-wrap: balance;
+  }
+}
+
+.font-display {
+  font-family: "Bodoni Moda", "Cormorant Garamond", Georgia, serif;
+}
+
+/* ============================================================
+   TACTILE SCRAPBOOK BACKGROUNDS (Zero gradients)
+   ============================================================ */
+
+/* 1. Vintage Pink Gingham / Plaid Pattern */
+.bg-gingham {
+  background-color: #FFFDF9;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(243, 201, 213, 0.52) 0px,
+      rgba(243, 201, 213, 0.52) 28px,
+      transparent 28px,
+      transparent 56px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(232, 184, 196, 0.48) 0px,
+      rgba(232, 184, 196, 0.48) 28px,
+      transparent 28px,
+      transparent 56px
+    );
+}
+
+/* 2. Deep Burgundy with subtle editorial grid */
+.bg-burgundy-grid {
+  background-color: #57252E;
+  background-image:
+    linear-gradient(rgba(247, 240, 230, 0.085) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(247, 240, 230, 0.085) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* 3. Dusty Pink with archival paper grain */
+.bg-dusty-paper {
+  background-color: #E8B8C4;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+/* 4. Warm Cream handmade paper texture */
+.bg-cream-paper {
+  background-color: #F7F0E6;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n2)' opacity='0.045'/%3E%3C/svg%3E");
+}
+
+/* 5. Espresso Dark Chocolate Linen */
+.bg-espresso-linen {
+  background-color: #3E2624;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(247, 240, 230, 0.035) 0px,
+      rgba(247, 240, 230, 0.035) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(247, 240, 230, 0.035) 0px,
+      rgba(247, 240, 230, 0.035) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+}
+
+/* 6. Vintage Printed Ledger Paper (Cream + faint ruled lines) */
+.bg-ledger-paper {
+  background-color: #FFFDF9;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 31px,
+    rgba(87, 37, 46, 0.08) 31px,
+    rgba(87, 37, 46, 0.08) 32px
+  );
+}
+
+/* 7. Blue Chambray / Fabric Swatch Accent (inspired by Reference 1) */
+.bg-chambray-fabric {
+  background-color: #DCE4EC;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(87, 37, 46, 0.045) 0px,
+      rgba(87, 37, 46, 0.045) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(62, 38, 36, 0.04) 0px,
+      rgba(62, 38, 36, 0.04) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+}
+
+/* Scalloped Lace Trim Strip */
+.lace-border-top {
+  background-image: radial-gradient(circle at 12px 12px, #FFFDF9 10px, transparent 10.5px);
+  background-size: 24px 12px;
+  background-repeat: repeat-x;
+}
+
+.lace-border-cream {
+  background-image: radial-gradient(circle at 12px 12px, #F7F0E6 10px, transparent 10.5px);
+  background-size: 24px 12px;
+  background-repeat: repeat-x;
+}
+
+/* Torn deckle paper clip-path */
+.torn-paper-card {
+  clip-path: polygon(
+    0% 1%, 4% 0%, 9% 1.4%, 15% 0.2%, 22% 1.1%, 28% 0%, 35% 1.3%, 42% 0.3%,
+    49% 1.2%, 57% 0%, 64% 1.4%, 72% 0.2%, 79% 1.1%, 86% 0%, 93% 1.2%, 100% 0.3%,
+    99.5% 15%, 100% 34%, 99.4% 55%, 100% 76%, 99.6% 99%,
+    94% 100%, 87% 98.8%, 80% 100%, 73% 98.7%, 66% 100%, 58% 98.9%, 50% 100%,
+    42% 98.8%, 34% 100%, 26% 98.7%, 18% 100%, 10% 98.8%, 3% 100%, 0% 99%,
+    0.5% 78%, 0% 56%, 0.6% 35%, 0% 16%
+  );
+}
+
+/* Physical paper shadows */
+.scrapbook-shadow {
+  box-shadow:
+    0 2px 4px rgba(62, 38, 36, 0.08),
+    0 10px 24px -6px rgba(62, 38, 36, 0.16),
+    0 22px 40px -16px rgba(62, 38, 36, 0.14);
+}
+
+.scrapbook-shadow-deep {
+  box-shadow:
+    0 4px 8px rgba(32, 16, 15, 0.16),
+    0 18px 36px -8px rgba(32, 16, 15, 0.28);
+}
+
+/* 3D perspective stage */
+.box-perspective {
+  perspective: 1400px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Marquee animation */
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 26s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Horizontal scrollbar */
+.timeline-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.timeline-scroll::-webkit-scrollbar-track {
+  background: rgba(247, 240, 230, 0.12);
+}
+.timeline-scroll::-webkit-scrollbar-thumb {
+  background: rgba(243, 201, 213, 0.45);
+  border-radius: 9999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+}
